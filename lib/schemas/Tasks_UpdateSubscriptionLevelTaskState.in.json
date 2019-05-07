@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "subscriptionId": {
+            "required": true,
+            "type": "string",
+            "pattern": "^[0-9A-Fa-f]{8}-([0-9A-Fa-f]{4}-){3}[0-9A-Fa-f]{12}$"
+        },
+        "ascLocation": {
+            "required": true,
+            "type": "string"
+        },
+        "taskName": {
+            "required": true,
+            "type": "string"
+        },
+        "taskUpdateActionType": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "Activate",
+                "Dismiss",
+                "Start",
+                "Resolve",
+                "Close"
+            ]
+        },
+        "api_version": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}
